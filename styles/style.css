@@ -20,6 +20,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 50px 00px;
+    flex-wrap: wrap;
+}
+
+#toggler,
+label {
+    display: none;
 }
 
 .clicked-color {
@@ -52,7 +58,6 @@ nav li a {
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* width: 1170px; */
     padding: 150px 0px;
     color: #fff;
     position: relative;
@@ -61,7 +66,6 @@ nav li a {
 }
 
 .banner-grad>h1 {
-    /* padding-top: 205px; */
     font-size: 4rem;
     font-weight: 800;
 
@@ -71,15 +75,6 @@ nav li a {
     width: 676px;
     margin: auto;
 }
-
-/* .banner-grad{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
-} */
 form {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.30);
@@ -447,7 +442,7 @@ footer hr {
 
 
 
-
+/* responsive for mobile  */
 @media only screen and (max-width: 600px) {
 
     header,
@@ -458,17 +453,30 @@ footer hr {
     .banner {
         padding: 100px 20px;
     }
-    nav{
-        display: block;
-        text-align: center;
-        padding: 30px 0px;
-    }
-    nav li{
-        padding-right: 10px;
-    }
+
     form {
         width: 100%;
         padding: 10px;
+    }
+
+    .navbar {
+        overflow: hidden;
+        width: 100%;
+        max-height: 0;
+    }
+
+    label {
+        display: inline-flex;
+    }
+
+    #toggler:checked~.navbar {
+        max-height: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
     input,
