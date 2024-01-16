@@ -50,6 +50,7 @@ nav li a {
     background-image: url('../Images/Group\ 13\ \(1\)\ \(1\).png');
     border-radius: 16px;
     text-align: center;
+    background-size: cover;
     background-repeat: no-repeat;
     /* width: 1170px; */
     padding: 150px 0px;
@@ -345,7 +346,7 @@ select {
 #perfect-place {
     display: flex;
     justify-content: space-between;
-    padding: 8 0px 0px;
+    padding: 40px 0px;
 }
 
 .perfect-place-content>h1 {
@@ -364,6 +365,10 @@ select {
 
 .perfect-place-content>li {
     padding-bottom: 30px;
+}
+
+.perfect-place-video {
+    width: 600px;
 }
 
 #subscribe {
@@ -444,38 +449,158 @@ footer hr {
 
 
 @media only screen and (max-width: 600px) {
-    body {
-        width: 600px;
+
+    header,
+    main {
+        width: 100%;
     }
 
-    nav {
+    .banner {
+        padding: 100px 20px;
+    }
+    nav{
+        display: block;
         text-align: center;
-        display: grid;
-        grid-template-columns: 1fr;
+        padding: 30px 0px;
     }
-
-    nav .navbar>ul {
-        display: grid;
-        grid-template-columns: 1fr;
+    nav li{
+        padding-right: 10px;
     }
-
     form {
-        display: grid;
-        width: 290px;
-        margin: auto;
+        width: 100%;
+        padding: 10px;
     }
 
     input,
     select {
-        margin: 10px auto;
-        width: 250px;
+        width: 100%;
+        margin-right: 0;
     }
 
-    .banner {
-        padding: 20px;
-        /* width: 500px; */
-        background-size: 500px cover;
+    .popular-tour-content {
+        padding-right: 20px;
+    }
 
+    #popular {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding: 50px 20px;
+    }
+
+    #popular .popular-tour-content {
+        padding-right: 0;
+    }
+
+    .desti-img img {
+        padding-bottom: 10px;
+    }
+
+    .first-line,
+    .second-line,
+    .third-line {
+        display: block;
+        width: 500px;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+
+    .perfect-place-video img {
+        width: 450px;
+        padding-top: 30px;
+        margin-left: 70px;
+    }
+
+    #destination>h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        width: 90%;
+    }
+
+    #destination {
+        padding-bottom: 10px;
+    }
+
+    #destination>p {
+        width: 70%;
+        margin: 10px 65px;
+        padding: 10px;
+    }
+
+    .carts {
+        display: block;
+        padding: 40px;
+    }
+
+    .cart-1,
+    .cart-2 {
+        margin-bottom: 30px;
+    }
+
+    .cart-3 {
+        margin: 0;
+    }
+
+    .why-choose-us>h1 {
+        font-size: 2.5rem;
+        padding: 0px;
+        width: 450px;
+        margin: 0px 50px;
+    }
+
+    .why-choose-us>p {
+        padding-bottom: 10px;
+        width: 450px;
+        margin: 0px 50px;
+    }
+
+    .deals-descrip {
+        padding-top: 0;
+        padding-bottom: 20px;
+        width: 450px;
+    }
+
+    .booking-cart-1,
+    .booking-cart-3,
+    .booking-cart-2 {
+        margin-left: 80px;
+        width: 450px;
+        padding: 20px;
+    }
+
+    .deals-btn {
+        margin: 20px 180px;
+    }
+
+    #subscribe {
+        display: flex;
+        margin: 40px 0px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .news-letter {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .save-money img {
+        width: 78%;
+        align-items: center;
+        margin: 0px 62px;
+    }
+
+    #perfect-place {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-letter {
+        margin-right: 0;
+    }
+
+    footer {
+        padding: 50px 20px;
     }
 
     .find-now {
@@ -500,5 +625,19 @@ footer hr {
     .popular-tour-img {
         padding-top: 30px;
         padding-right: 50px;
+    }
+
+    footer {
+        padding: 20px 20px;
+    }
+
+    footer>p {
+        width: 400px;
+        padding: 20px 0px;
+        margin: 0 auto;
+    }
+
+    .copy-right {
+        padding-bottom: 20px;
     }
 }
